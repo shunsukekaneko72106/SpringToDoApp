@@ -8,20 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.springtodoapp.service.TaskService;
 
-/**
- * ToDoアプリコントローラー
- */
 @Controller
 @RequestMapping("/task")
 public class TaskController {
   
   //クラスを呼び出し
-  private final TaskService taskService;
+  // private final TaskService taskService;
 
-  @Autowired
-  public TaskController(TaskService taskService) {
-      this.taskService = taskService;
-  }
+  // @Autowired
+  // public TaskController(TaskService taskService) {
+  //     this.taskService = taskService;
+  // }
 
     /**
    * タスクの一覧を表示します
@@ -35,11 +32,10 @@ public class TaskController {
     //新規登録か更新かを判断する仕掛け
 
     //Taskのリストを取得する
-    model.addAttribute("list", "");
-    model.addAttribute("title", "タスク一覧");
+    // model.addAttribute("list", "");
+    // model.addAttribute("title", "タスク一覧");
 
+    System.out.println("taskメソッドが呼ばれました。");
     return "task/index";
   }
-
-
 }
